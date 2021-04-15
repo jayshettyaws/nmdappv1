@@ -1,0 +1,11 @@
+https://www.example.com/.well-known/assetlinks.json is accessible
+
+Make sure https://www.example.com/.well-known/assetlinks.json is accessible
+
+src/.well-known/assetlinks.json
+
+https://dev.notemydate.com
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/jayshettyaws/nmdappv1.git
+git push -u origin main
