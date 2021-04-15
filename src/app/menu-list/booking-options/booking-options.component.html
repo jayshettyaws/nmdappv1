@@ -1,0 +1,15 @@
+<div fxLayoutAlign="center center" fxLayout="column">
+    <h3 >Event Booking Options</h3>
+
+    <mat-radio-group   [(ngModel)]="booking_option" fxLayoutAlign="center center" fxLayout="column" style="text-align: left;">
+        <mat-radio-button class="mt15" value="app" matTooltip ="booking options description" matTooltipPosition="above">
+            Through App
+        </mat-radio-button>
+        <mat-radio-button class="mt15" value="appointment" matTooltip ="booking options description"  matTooltipPosition="below">
+            Take Appointment
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <button mat-button class="mt15" [disabled]="booking_option == ''" (click)="booking_options()">Next</button>
+      
+</div>

@@ -1,0 +1,38 @@
+.mt15{
+    margin-top: 15px;
+}
+.mr15{
+    margin-right: 15px;
+}
+
+.stars {
+    width: 12px;
+    // display: inline-block;
+  }
+
+//   ::ng-deep ngx-star-rating{
+//     font-size: 10px;
+//     background: green;
+//   } 
+
+li{
+    list-style: none;
+}
+
+::ng-deep label.star{
+    font-size: 16px !important;
+    width: 1px;
+    
+}
+
+.mat-accordion .mat-expansion-panel{
+    width: 35%  !important;
+}
+  
+.mt10{
+    margin-top: 10px;
+}
+
+.mb10{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,71 @@
+
+
+<div>
+    <h3 style= "text-align: center;">Select Vendors for each event</h3>
+
+    <mat-accordion  fxLayoutAlign="center center" fxLayout="column">
+       <!-- <mat-expansion-panel [expanded] = "open_index" (opened)="set_step(i)" > -->
+        <mat-expansion-panel class="mt15" *ngFor =" let event of selected_events" multi = "false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{event.event}} Vendors
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+                
+            </mat-expansion-panel-header>
+
+             <!-- content of accordion -->
+            <div fxLayout="column">
+               
+                <!-- <ul>
+                    <li *ngFor =" let vendor of vendor_list;let i = index" class="mt10 mb10" fxLayoutAlign="space-around center" fxLayout="row" >
+                        <mat-radio-button  [value]="vendor.name" [attr.data-index] ="i" (click)= "vendor_selected(i)">
+                            {{ vendor.name }} 
+                        </mat-radio-button>
+                        <div>
+                            <ngx-star-rating class="stars" [(ngModel)]="rating3"  [id]="'rating'"[disabled] ="true" ></ngx-star-rating>
+                        </div>
+
+                        <div *ngIf = "i == clicked_index" class="mt10 mb10"  >
+                            <button mat-raised-button (click)="show_info(clicked_index)" >View more</button>
+
+                        </div>
+                    </li>
+                </ul> -->
+                 
+
+                <mat-radio-group aria-label="Select an option">
+                    <ul>
+                        <li *ngFor =" let vendor of vendor_list;let i = index" class="mt10 mb10" fxLayout="column" >
+                            
+                            <div fxLayoutAlign="space-around center" fxLayout="row" >
+                                <mat-radio-button  [value]="vendor.name" [attr.data-index] ="i" (click)= "vendor_selected(i)">
+                                    {{ vendor.name }} 
+                                </mat-radio-button>
+                                
+                                <div>
+                                    <ngx-star-rating class="stars" [(ngModel)]="rating3"  [id]="'rating'"[disabled] ="true" ></ngx-star-rating>
+                                </div>
+                                
+                            </div>
+                           
+
+                            <div *ngIf = "i == clicked_index" class="mt10 mb10"  >
+                                <button mat-raised-button (click)="show_info(clicked_index)" >View more</button>
+
+                            </div>
+                        </li>
+                    </ul>
+                    
+
+                </mat-radio-group>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="mt15" fxLayoutAlign="center center">
+        <button mat-raised-button [disabled] = "selected_events.length == 0" class="mr15" color ="primary" >Submit</button>
+        <button mat-raised-button color ="warn" >Cancel</button>
+    </div>
+    
+</div>

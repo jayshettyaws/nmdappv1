@@ -1,0 +1,21 @@
+<div>
+    <mat-card class="card" fxLayout="column" fxLayoutAlign="center center">
+       
+            <mat-form-field class="inpt">
+                <mat-label>Username (email or phone number)</mat-label>
+                <input matInput placeholder="Ex : Raj@gmail.com">
+            </mat-form-field>
+    
+            <mat-form-field class="inpt">
+                <mat-label>Password</mat-label>
+                <input matInput type = "password">
+            </mat-form-field>    
+      
+        <div class="mt20">
+            <button mat-raised-button  (click)="login()">Login</button>
+            <button mat-button class="ml10" (click)="back_home()">Go Back to Home</button>
+        </div>
+       
+
+    </mat-card>
+</div>

@@ -1,0 +1,51 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nmdappv1-dev-00614-authRole",
+      "UnauthRoleArn": "arn:aws:iam::858242155699:role/amplify-nmdappv1-dev-00614-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::858242155699:role/amplify-nmdappv1-dev-00614-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nmdappv1-dev-00614-deployment",
+      "UnauthRoleName": "amplify-nmdappv1-dev-00614-unauthRole",
+      "StackName": "amplify-nmdappv1-dev-00614",
+      "StackId": "arn:aws:cloudformation:us-east-1:858242155699:stack/amplify-nmdappv1-dev-00614/4e7afe80-9d50-11eb-bb27-1232a8922e87",
+      "AmplifyAppId": "d13cupsftbxopn"
+    }
+  },
+  "auth": {
+    "nmdappv1351def33": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-nmdappv1-dev-00614-deployment/amplify-cfn-templates/auth/nmdappv1351def33-cloudformation-template.yml",
+        "logicalId": "authnmdappv1351def33"
+      },
+      "lastPushTimeStamp": "2021-04-15T20:46:18.808Z",
+      "output": {
+        "UserPoolId": "us-east-1_juH9foFRH",
+        "AppClientIDWeb": "1p8eeqddr5d1n5oq1t1n12i5sa",
+        "AppClientID": "1mtb0scpl38dt6qpmamjtgle4k",
+        "IdentityPoolId": "us-east-1:11bf76a7-83ec-4d49-a3fd-0f1822ef55b2",
+        "IdentityPoolName": "nmdappv1351def33_identitypool_351def33__dev",
+        "UserPoolName": "nmdappv1351def33_userpool_351def33"
+      },
+      "lastPushDirHash": "3NTVAYT47jB457tcScOYb3JMlLY="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-nmdappv1-dev-00614-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2021-04-15T20:46:18.832Z",
+      "output": {},
+      "lastPushDirHash": "/+VZ33seFFqAr6wbtptwbINUfSA="
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div>
+    
+
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <h2>Select Event</h2>
+        <mat-card class="mt15" *ngFor="let event of main_events" (click)="select_event(event.param)">{{ event.name}}</mat-card>
+      
+    </div>
+    
+    <!-- <button mat-button class="ml10" (click)="back_home()">Go Back to Home</button> -->
+</div>

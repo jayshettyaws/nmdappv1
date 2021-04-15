@@ -1,0 +1,22 @@
+<!-- top header -->
+<amplify-authenticator>
+  <div>
+    Restaurants App
+    <amplify-sign-out></amplify-sign-out>
+  </div>
+<mat-toolbar color = "primary">
+	<span>Booking App</span>
+	<span class="header-spacer"></span>
+
+	<button mat-icon-button class=" favorite-icon" (click) = "home()">
+		<mat-icon>home</mat-icon>
+	</button>
+
+	<button mat-icon-button class="" (click)="show_about()">
+	<!-- <mat-icon>share</mat-icon> -->
+		About
+	</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+</amplify-authenticator>

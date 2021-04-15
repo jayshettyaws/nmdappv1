@@ -1,0 +1,42 @@
+<div *ngIf = "!data.is_vendor_info">
+    <p>{{data.message }}</p>
+
+    <div>
+        <button mat-button (click)="cancel()">Cancel</button>
+        <button mat-button (click)="okay()">Ok</button>
+    </div>
+</div>
+
+
+
+<div *ngIf = "data.is_vendor_info">
+    <div fxLayout="column">
+         <!-- here images are shown in carousel -->
+        <div fxLayoutAlign="center center">
+            <!-- <img  class="vendor-img" src="assets/images/vendor1.jpeg" alt="vendor photo"> -->
+            <carousel class="vendor-img" [images]="images"></carousel>
+        </div>
+    
+        <div fxLayoutAlign="start start" fxLayout="row">
+            <img mat-card-avatar class="example-header-image mr20">
+            <span><h2>Diksheeth Jadav</h2></span>
+        </div>
+
+        <span>Veg Caterer</span>
+        <span> Near Unity Hall, Thekkatte, Kundapura</span>
+
+        <div  fxLayoutAlign="center start" fxLayout="row">
+            
+            <button mat-icon-button class="cl-btn" >
+                <a  href="tel:09766589572">
+                    <span class="material-icons">call</span>
+                </a>
+            </button>
+        
+            <button mat-button mat-dialog-close >Ok</button>
+        </div>
+    </div>    
+   
+       
+ 
+</div>

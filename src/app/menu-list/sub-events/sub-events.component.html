@@ -1,0 +1,63 @@
+<div *ngIf = "!is_selected_events">
+    <h3 style= "text-align: center;">Select Sub Events</h3>
+    
+    <mat-accordion  fxLayoutAlign="center center" fxLayout="column">
+       <!-- <mat-expansion-panel [expanded] = "open_index" (opened)="set_step(i)" > -->
+        <mat-expansion-panel class="mt15" *ngFor =" let event of sub_events_list; let i = index" multi = "false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{event.name}}
+                </mat-panel-title>
+                <mat-panel-description></mat-panel-description>
+                
+            </mat-expansion-panel-header>
+
+             <!-- content of accordion -->
+            <div fxLayout="column">
+                <span>Chooose options</span> 
+
+                <section fxLayout="column">
+                    <mat-checkbox *ngFor =" let option of event.options" [checked]="option.checked" (change)="checked_option($event,i,option.name,event)">{{option.name}}</mat-checkbox>
+                </section>
+                
+                <mat-form-field  floatLabel = "never">
+                    <!-- <mat-label>Choose a date</mat-label> -->
+                    <input matInput [matDatepicker]="picker" placeholder="Choose Date" [(ngModel)] ="event.date" disabled>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false" ></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="mt15" fxLayoutAlign="center center">
+        <button mat-raised-button [disabled] = "selected_events.length == 0" class="mr15" color ="primary" (click)="submit_sub_events()">Submit</button>
+        <button mat-raised-button color ="warn" (click)="booking_options_page()">Cancel</button>
+    </div>
+    
+</div>
+
+<!-- once submit is clicked display all options selected by user -->
+<div *ngIf = "is_selected_events">
+
+    <button (click)= "save_events()"> test </button>
+    <ul *ngFor = "let main_event of selected_events"> 
+        <li>Event : {{main_event.event}}  </li>   
+        
+        <li>The options: </li>
+
+        <li *ngFor = "let sub_option of main_event.options" > 
+            {{ sub_option.name}}
+        </li>
+        <li>On {{ main_event.date | date }}</li> 
+        
+    </ul>
+   
+    <div class="mt15" fxLayoutAlign="center center">
+        <button mat-raised-button class="mr15" color ="primary" (click)="confirm_events()">Confirm</button>
+        <button mat-raised-button class="mr15" color ="primary" (click)="add_events()">Add/Edit</button>
+        <button mat-raised-button color ="warn" (click)="cancel_selections()">Cancel</button>
+    </div>
+
+   
+</div>

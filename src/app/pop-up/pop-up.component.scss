@@ -1,0 +1,29 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  .example-header-image {
+    background-image: url('../../assets/images/user.png');
+    background-size: cover;
+    width: 65px;
+    height: 65px;
+    // background-image: image('assets/images/user.png');
+  }
+
+.vendor-img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .mr20{
+      margin-right: 20px;
+  }
+
+.cl-btn .a{
+  text-decoration: none;
+  color: black !important;
+}
+
+.cl-btn{
+  background: #bfe2bf;
+}

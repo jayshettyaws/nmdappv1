@@ -1,0 +1,41 @@
+<div>
+    <mat-card class="card" fxLayout="column" fxLayoutAlign="center center">
+       
+            <mat-form-field class="inpt">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Ex : Raj">
+            </mat-form-field>
+
+            <mat-form-field class="inpt">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Ex : Raj">
+            </mat-form-field>
+    
+            <mat-form-field class="inpt">
+                <mat-label>Email address</mat-label>
+                <input matInput placeholder="Ex : Raj">
+            </mat-form-field>
+
+            <mat-form-field class="inpt">
+                <mat-label>Password</mat-label>
+                <input matInput type = "password">
+            </mat-form-field>    
+
+            <mat-form-field class="inpt">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type = "password">
+            </mat-form-field>  
+            
+            <mat-form-field class="inpt">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type = "number">
+            </mat-form-field>  
+      
+        <div class="mt20">
+            <button mat-raised-button  (click)="new_account()">Create Account</button>
+            <button mat-button class="ml10" (click)="back_home()">Go Back to Home</button>
+        </div>
+       
+
+    </mat-card>
+</div>
